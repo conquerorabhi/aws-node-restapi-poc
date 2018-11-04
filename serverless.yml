@@ -1,0 +1,24 @@
+
+service: aws-node-restapi-poc # NOTE: update this with your service name
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  getContact:
+    handler: contactHandler.getContact
+    events: 
+      -http: 
+        path: getContactk
+        method: get
+  postContact:
+    handler: contactHandler.postContact
+    events:
+      -http:
+        path: postContact
+        method: post
+        
+  
+
+
